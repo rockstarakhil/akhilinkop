@@ -1,2 +1,2 @@
 django 
-django_filters == 2.4.0
+#django_filters == 2.4.0
