@@ -1,2 +1,3 @@
 django 
 #django_filters == 2.4.0
+django-filter == 2.4.0
