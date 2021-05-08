@@ -1,0 +1,99 @@
+
+{% load static %}
+{% block content %}
+<!DOCTYPE html> 
+<html>
+   <head> 
+     <title>CRM</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+</head>
+	<br>
+
+<center><h1>hi i was able to return the hotel code but don't know django is sending whole query set</h1></center>
+<center><p>Because of time issues i'm sending this to you leaving at this functionality only </p></center>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Akhil Task</a>
+    
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inkoop Task <span class="sr-only">(current)</span></a>
+        </li>
+       
+        
+        
+      </ul>
+      
+    </div>
+  </nav>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Hotel Information</h5>
+			<hr>
+			<p>Total Hotels: {{hotels_count}}</p>
+			<p>Total States: {{state_count}}</p>
+		</div>
+	</div>
+
+	
+</div>
+
+
+<br>
+<div class="row">
+	<div class="col">
+		<div class="card card-body">
+
+			<form method="get">
+				{{myFilter.form}}
+
+		    <button class="btn btn-primary" type="submit">Search</button>
+		  </form>
+
+		</div>
+	</div>
+	
+</div>
+<br>
+
+<h1>Your Search Query is {{hotel}}</h1>
+
+
+
+<!--<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Product</th>
+					<th>Note</th>
+					<th>Date Orderd</th>
+					<th>Status</th>
+					<th>Update</th>
+					<th>Remove</th>
+				</tr>
+      -->
+			<!--	{% for hotel in hotels %}
+
+				<tr>
+					<td>{{hotel.state}}</td>
+					<td>{{hotel.note}}</td>
+					<td>{{hotel.date_created}}</td>
+					<td>{{hotel.status}}</td>
+					<td><a class="btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
+
+					<td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
+				</tr> -->
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
